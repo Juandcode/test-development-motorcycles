@@ -1,0 +1,21 @@
+type Horarios{
+    id: Int!
+    time:String!
+    countDrivers:Int!
+    user:[User]
+}
+type User{
+    id:Int!
+    idUser:String!
+    horarios:Horarios
+}
+type Query{
+    horarios:[Horarios]!
+}
+type Mutation{
+    takeHorario(id:Int!):Horarios!
+}
+
+type Subscription{
+    horarios:Horarios!
+}
