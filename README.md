@@ -10,6 +10,13 @@ If the same user clicks on the same box, he must release the resource, if it was
 
 If other users have taken all the motorcyclists, the box should appear in red and they should not let me take that time
 
+### Installation
+
+Inside **SERVER** and **APP** file
+```
+npm install
+```
+
 ### Technologies used
 React.js
 
@@ -18,3 +25,6 @@ Apollo server - Client
 Websockets
 
 Graphql
+
+Atomic design
+
