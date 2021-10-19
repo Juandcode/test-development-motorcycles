@@ -13,9 +13,17 @@ If other users have taken all the motorcyclists, the box should appear in red an
 ### Installation
 
 Inside **SERVER** and **APP** file
+
 ```
 npm install
 ```
+```
+prisma generate
+```
+```
+prisma db push
+```
+Do not forget put your mysql configuration in .env
 
 ### Technologies used
 React.js
@@ -25,6 +33,8 @@ Apollo server - Client
 Websockets
 
 Graphql
+
+Prisma
 
 Atomic design
 
