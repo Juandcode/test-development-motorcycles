@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon src/index.ts",
+    "prismainit": "prisma init",
+    "prismagenerate": "prisma generate",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
