@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import Card from "../atoms/Card";
 import Title from "../atoms/Title"
-import {context1} from "../../Context";
 import {gql, useMutation} from "@apollo/client";
 
 type props = {
@@ -9,7 +8,7 @@ type props = {
     driversCount: number,
     onClick?: () => void,
     user?: any,
-    id?: string,
+    id?: string | number,
 }
 
 export default ({time, driversCount, onClick, user, id}: props) => {

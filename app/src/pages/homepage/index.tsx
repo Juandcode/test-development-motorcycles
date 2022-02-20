@@ -2,27 +2,19 @@ import React, {ReactElement, ReactNode, useEffect} from 'react'
 import CardList from "../../components/organisms/CardList";
 import {gql, useApolloClient} from "@apollo/client";
 import Notification from "../../components/atoms/Notification"
+import {useUniqueId} from "../../Context";
+import {SUBSCRIBE} from "../../shared/apollo";
 
-const SUBSCRIBE = gql`subscription{
-    horarios {
-        id
-        time
-        countDrivers
-    }
-}`
 
-type props = {
-    uniqueId: string
-}
-
-export default ({uniqueId}: props): ReactElement => {
+export default (): ReactElement => {
     const client = useApolloClient();
+    const uniqueId = useUniqueId()
     const subscribe = (): void => {
         client.subscribe({
             query: SUBSCRIBE
         }).subscribe({
             next: async (event) => {
-                //console.log('event ', event.data.horarios);
+                console.log('event ', event.data.horarios);
                 //console.log('finish');
             }
         })

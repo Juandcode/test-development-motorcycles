@@ -3,13 +3,9 @@ import logo from './logo.svg';
 //import './App.css';
 import Home from "./pages/homepage"
 
-type props = {
-    uniqueId: string
-}
-
-function App({uniqueId}: props) {
+function App() {
     return (
-        <Home uniqueId={uniqueId}/>
+        <Home/>
     );
 }
 
